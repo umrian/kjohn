@@ -1,0 +1,33 @@
+@use "../scss-utils/mixins" as *;
+
+.img-container {
+  @include flex-center(row);
+  position: relative;
+  img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  img:first-child {
+    @include mobile-only {
+      width: 25rem;
+      height: 15rem;
+    }
+    @include mq(medium) {
+      width: 60rem;
+      height: 15rem;
+    }
+  }
+
+  img:not(:first-child) {
+    display: none;
+  }
+
+  @include mq(small) {
+    img:not(:first-child) {
+      display: block;
+      position: absolute;
+      border: 1px solid #000;
+    }
+  }
+}

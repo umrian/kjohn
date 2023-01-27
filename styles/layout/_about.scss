@@ -1,0 +1,87 @@
+@use "../scss-utils/mixins" as *;
+@use "../scss-utils/variables" as *;
+
+.about {
+  position: relative;
+  @include flex-center(column);
+  @include mq(small) {
+    @include flex(row);
+    gap: 2rem;
+  }
+  width: min(75%, 50rem);
+  @include mq(small) {
+    min-height: 25rem;
+  }
+
+  padding: 2rem;
+  margin: -3rem auto 6rem auto;
+  background-color: rgb(39, 38, 0);
+  border-radius: 3rem;
+
+  color: $heading-color;
+
+  &-heading {
+    @include flex-center(column);
+    gap: 0.5rem;
+    width: 85%;
+    margin-inline: auto;
+    margin-block: 2rem;
+    & > * {
+      width: max-content;
+      font-family: "Cinzel Decorative", serif;
+    }
+  }
+  h2 {
+    @include mobile-only {
+      align-self: flex-start;
+    }
+  }
+  span {
+    @include mobile-only {
+      align-self: flex-end;
+    }
+  }
+  p {
+    font-family: "Inknut Antiqua", serif;
+  }
+
+  // dwarf-lord
+  img {
+    position: absolute;
+    z-index: $img-layer;
+    width: 180px;
+    height: 180px;
+    transform: scaleX(-1);
+    bottom: -6rem;
+
+    //avoid sidescrolling, while maintaining responsiveness
+    right: -1.8rem;
+    @include mq(small) {
+      width: 230px;
+      height: 230px;
+      right: -3.9rem;
+    }
+    @include mq(medium) {
+      width: 280px;
+      height: 280px;
+      right: -5.6rem;
+    }
+    @include mq(large) {
+      width: 350px;
+      height: 350px;
+      right: -8rem;
+    }
+  }
+
+  .section-divider {
+    left: 2rem;
+    bottom: -4rem;
+    @include mq(small) {
+      width: 75%;
+    }
+    @include mq(medium) {
+      width: 85%;
+      bottom: -6rem;
+    }
+  }
+}

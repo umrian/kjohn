@@ -1,0 +1,86 @@
+@use "../scss-utils/variables" as *;
+@use "../scss-utils/mixins" as *;
+
+.projects {
+  @include flex(column);
+
+  @include mobile-only {
+    @include background-img("/assets/kingdom-entrance-low-opacity.png", fixed);
+    background-size: cover;
+  }
+  p {
+    color: $text-color-neutral;
+  }
+
+  position: relative;
+  gap: 2rem;
+  // width: clamp(16rem, 90vw, 70rem);
+  margin-inline: auto;
+  padding-block: 2rem;
+
+  button {
+    @include mobile-only {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  .section-divider {
+    bottom: 0;
+  }
+}
+
+.projects-container {
+  @include flex-center(column);
+  @include mobile-only {
+    gap: 3rem;
+  }
+  gap: 8rem;
+  width: 90%;
+  margin-inline: auto;
+}
+
+article {
+  @include flex(column);
+  gap: 2rem;
+  @include mq(small) {
+    @include flex(row);
+    &:nth-child(2n) {
+      flex-direction: row-reverse;
+    }
+    gap: 5rem;
+  }
+}
+
+//who wins
+article:first-child {
+  @include mq(small) {
+    img:not(:first-child) {
+      width: 12rem;
+      bottom: -3rem;
+      left: 1rem;
+    }
+  }
+}
+
+//charts and cards
+article:nth-child(2) {
+  @include mq(small) {
+    img:nth-child(2) {
+      width: 7rem;
+      bottom: -1rem;
+      right: -1rem;
+    }
+    img:nth-child(3) {
+      width: 10rem;
+      top: -2rem;
+      right: 1rem;
+    }
+  }
+}
+
+.project-details {
+  position: relative;
+  @include flex(column);
+  gap: 1rem;
+}

@@ -1,0 +1,11 @@
+@use "../scss-utils/variables" as *;
+@use "../scss-utils/mixins" as *;
+a {
+  @include flex-center(column);
+  gap: 2rem;
+  color: $link-text;
+  width: 100%;
+  &:hover {
+    color: $link-text-hover;
+  }
+}

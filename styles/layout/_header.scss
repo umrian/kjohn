@@ -1,0 +1,25 @@
+@use "../scss-utils/variables" as *;
+@use "../scss-utils/mixins" as *;
+header {
+  height: 100vh;
+  height: 100dvh;
+  @include flex-center(column);
+  color: $heading-color;
+  @include background-img("/assets/home.jpg", fixed);
+
+  hgroup {
+    max-width: 50rem;
+    @include flex(column);
+  }
+
+  h1 {
+    align-self: flex-start;
+    font-family: "Cinzel Decorative", serif;
+  }
+
+  span {
+    align-self: flex-end;
+    font-weight: 900;
+    font-family: "Inknut Antiqua", serif;
+  }
+}

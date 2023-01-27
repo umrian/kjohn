@@ -1,0 +1,21 @@
+@use "./functions.scss" as *;
+
+//color switch system
+$text-color-accent: var(--clr-accent);
+$text-color-neutral: var(--clr-neutral);
+$bg-color: var(--clr-dark);
+
+$heading-color: $text-color-accent;
+$paragraph-color: $text-color-neutral;
+
+$button-text: var(--clr-accent);
+$button-bg: var(--clr-accent);
+$button-text-hover: var(--clr-neutral);
+$button-bg-hover: var(--clr-accent-hot);
+
+$link-text: var(--clr-secondary);
+$link-bg: var(--clr-primary);
+$link-text-hover: var(--clr-tertiary);
+
+$img-layer: 10;
+$divider-layer: 9;

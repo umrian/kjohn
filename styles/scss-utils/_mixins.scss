@@ -1,0 +1,47 @@
+$breakpoints: (
+  small: 40em,
+  medium: 60em,
+  large: 90em,
+);
+
+@mixin mq($key) {
+  $size: map-get($breakpoints, $key);
+
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin mobile-only {
+  @media only screen and (max-width: 30em) {
+    @content;
+  }
+}
+
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin flex-center($direction, $justify: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: center;
+}
+
+@mixin background-img(
+  $url,
+  $attachment: (local, scroll),
+  $x: center,
+  $y: center
+) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-position-x: $x;
+  background-position-y: $y;
+
+  background-attachment: $attachment;
+}
