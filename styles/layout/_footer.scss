@@ -4,13 +4,13 @@ footer {
   @include mq(medium) {
     height: 80vh;
   }
+  text-align: center;
   padding: 1rem;
   font-family: "Inknut Antiqua", serif;
   font-weight: 700;
-  @include background-img("/assets/footer.jpg", fixed);
+  @include background-img("/assets/shenron.jpg", fixed);
   h2 {
     position: relative;
-    align-self: flex-start;
   }
 
   //stark logo
@@ -18,14 +18,12 @@ footer {
     content: "";
     display: inline-block;
     background-image: url("/assets/stark-logo-transparent.png");
-    position: absolute;
-    top: 0;
-    left: 9rem;
     border-radius: 50%;
     background-color: $text-color-neutral;
     background-size: cover;
     width: 45px;
     height: 45px;
+    margin-left: 1rem;
   }
 
   p {
@@ -37,7 +35,6 @@ footer {
 address {
   --svg-width: 50px;
   @include flex-center(column);
-  margin-block: 2rem;
   padding: 1rem;
   height: 80%;
 }

@@ -4,17 +4,18 @@ header {
   height: 100vh;
   height: 100dvh;
   @include flex-center(column);
-  color: $heading-color;
-  @include background-img("/assets/home.jpg", fixed);
+  @include background-img("/assets/kame-house.jpg", scroll);
 
   hgroup {
     max-width: 50rem;
     @include flex(column);
+    color: scroll;
   }
 
   h1 {
     align-self: flex-start;
     font-family: "Cinzel Decorative", serif;
+    color: black;
   }
 
   span {

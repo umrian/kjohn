@@ -4,19 +4,21 @@
 .projects {
   @include flex(column);
 
-  @include mobile-only {
-    @include background-img("/assets/kingdom-entrance-low-opacity.png", fixed);
-    background-size: cover;
+  // @include mobile-only {
+  //   @include background-img("/assets/kingdom-entrance-low-opacity.png", fixed);
+  // }
+  @include background-img("/assets/goku-opc.jpg", fixed);
+  h2 {
+    text-align: center;
   }
   p {
     color: $text-color-neutral;
+    font-family: "Inknut Antiqua", serif;
   }
 
   position: relative;
   gap: 2rem;
-  // width: clamp(16rem, 90vw, 70rem);
   margin-inline: auto;
-  padding-block: 2rem;
 
   button {
     @include mobile-only {
@@ -35,15 +37,17 @@
   @include mobile-only {
     gap: 3rem;
   }
-  gap: 8rem;
-  width: 90%;
+  // width: 90%;
+  width: clamp(16rem, 90vw, 55rem);
   margin-inline: auto;
+
+  gap: 8rem;
 }
 
 article {
   @include flex(column);
   gap: 2rem;
-  @include mq(small) {
+  @include mq(medium) {
     @include flex(row);
     &:nth-child(2n) {
       flex-direction: row-reverse;
