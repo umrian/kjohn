@@ -1,0 +1,48 @@
+@use "../scss-utils/variables" as *;
+
+.section-divider {
+  width: 65%;
+  margin-inline: auto;
+  margin-block: 2rem;
+  height: 0.3rem;
+  background-color: $heading-color;
+  border-radius: 1rem;
+}
+
+.project-divider {
+  width: 65%;
+  height: 0.1rem;
+  background-color: $button-text-hover;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.project-divider::after {
+  content: "";
+  position: absolute;
+  top: -3rem;
+  right: -4rem;
+  display: inline-block;
+  background-image: url("/assets/db-2stars.png");
+  border-radius: 50%;
+  background-size: cover;
+  width: 45px;
+  height: 45px;
+  margin-left: 1rem;
+}
+
+.project-divider:nth-of-type(2n + 1)::after {
+  top: 0;
+  bottom: -3rem;
+  left: -4rem;
+}
+
+.project-divider:nth-of-type(2)::after {
+  background-image: url("/assets/db-3stars.png");
+}
+.project-divider:nth-of-type(3)::after {
+  background-image: url("/assets/db-4stars.png");
+}
+.project-divider:nth-of-type(4)::after {
+  background-image: url("/assets/db-5stars.png");
+}
