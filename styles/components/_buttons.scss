@@ -1,37 +1,29 @@
 @use "../scss-utils/variables" as *;
 
 button {
-  position: relative;
   display: inline-flex;
-  justify-content: center;
+  gap: 0.5rem;
   align-items: center;
   text-align: center;
-  border: none;
-  background-color: transparent;
-  padding-inline: 1.5rem;
-  padding-block: 0.2rem;
-  color: $button-text;
   font-family: "Inknut Antiqua", serif;
+  font-weight: 700;
+  padding-inline: 1.5rem;
+  padding-block: 0.4rem;
+  margin-block: 0.8rem;
+  color: $button-text;
+  background-color: $button-bg;
+  border: none;
+  border-radius: 2rem;
 
   &:is(:hover, :focus) {
     color: $button-text-hover;
-    img {
-      transform: scale(1.1);
-    }
   }
 
   &:where(button, input):where(:not(:active)):focus-visible {
-    outline-offset: 10px;
+    outline-offset: 8px;
     outline-color: $button-bg-hover;
     outline-width: 0.2rem;
     outline-style: double;
-  }
-
-  img {
-    position: absolute;
-    width: 15ch;
-    z-index: -1;
-    filter: drop-shadow(0 0 0.3rem hsl(0, 0%, 60%));
   }
 
   cursor: pointer;
