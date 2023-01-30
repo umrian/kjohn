@@ -1,6 +1,55 @@
+@use "../scss-utils/variables" as *;
+@use "../scss-utils/mixins" as *;
 .skills {
+  @include flex-center(column);
+  position: relative;
+
+  padding-block: 3rem;
+  background-color: $bg-color;
+
   h2 {
     font-family: "Inknut Antiqua", serif;
   }
-  background-color: bisque;
+  h2::after {
+    content: "";
+    display: inline-block;
+    background-image: url("/assets/db-6stars.png");
+    border-radius: 50%;
+    background-size: cover;
+    width: 45px;
+    height: 45px;
+    margin-left: 1rem;
+  }
+  span {
+    color: $button-bg-hover;
+  }
+  //goku on cloud
+  img {
+    width: 120px;
+    position: absolute;
+    right: 8%;
+    top: -7rem;
+    @include mq(small) {
+      width: 250px;
+    }
+  }
+
+  .tagcloud {
+    // background-color: black;
+    &--item {
+      font-size: 0.8rem;
+      @include mq(small) {
+        font-size: 1.2rem;
+      }
+      @include mq(medium) {
+        font-size: 1.5rem;
+      }
+      @include mq(large) {
+        font-size: 1.75rem;
+      }
+      font-family: "Inknut Antiqua";
+      font-weight: 700;
+      // background-image: url("/assets/svg-icons/nextjs-fill-svgrepo-com.svg");
+    }
+  }
 }
