@@ -3,7 +3,6 @@
 .skills {
   @include flex-center(column);
   position: relative;
-
   padding-block: 3rem;
   background-color: $bg-color;
 
@@ -21,8 +20,9 @@
     margin-left: 1rem;
   }
   span {
-    color: $button-bg-hover;
+    color: $text-color-accent-hot;
   }
+
   //goku on cloud
   img {
     width: 120px;
