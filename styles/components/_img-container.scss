@@ -1,11 +1,12 @@
 @use "../scss-utils/mixins" as *;
-
+@use "../scss-utils/variables" as *;
 .img-container {
   @include flex-center(row);
   position: relative;
   img {
     max-width: 100%;
     object-fit: cover;
+    outline: 3px solid $bg-color;
   }
 
   img:first-child {
