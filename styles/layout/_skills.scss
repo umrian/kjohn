@@ -3,12 +3,9 @@
 .skills {
   @include flex-center(column);
   position: relative;
-  padding-block: 3rem;
+  padding-block: 1.5rem;
   background-color: $bg-color;
 
-  h2 {
-    font-family: "Inknut Antiqua", serif;
-  }
   h2::after {
     content: "";
     display: inline-block;
@@ -19,10 +16,6 @@
     height: 45px;
     margin-left: 1rem;
   }
-  span {
-    color: $text-color-accent-hot;
-  }
-
   //goku on cloud
   img {
     width: 120px;
@@ -47,8 +40,10 @@
       @include mq(large) {
         font-size: 1.75rem;
       }
-      font-family: "Inknut Antiqua";
+      font-family: "Bree Serif", serif;
       font-weight: 700;
+      color: $text-color-accent-hot;
+
       // background-image: url("/assets/svg-icons/nextjs-fill-svgrepo-com.svg");
     }
   }
