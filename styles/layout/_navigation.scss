@@ -1,0 +1,24 @@
+@use "../scss-utils/variables" as *;
+@use "../scss-utils/mixins" as *;
+nav {
+  @include flex-center(row);
+  padding-inline: 3rem;
+  padding-block: 1rem;
+
+  @include mq(medium) {
+    justify-content: flex-end;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    @include flex-center(row);
+
+    gap: 1rem;
+
+    a {
+      font-family: "Bree Serif";
+      color: $bg-color;
+    }
+  }
+}

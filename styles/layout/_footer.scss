@@ -1,34 +1,27 @@
 @use "../scss-utils/mixins" as *;
 @use "../scss-utils/variables" as *;
 footer {
-  @include mq(medium) {
-    height: 80vh;
-  }
   text-align: center;
   padding: 1rem;
-  font-family: "Inknut Antiqua", serif;
   font-weight: 700;
-  @include background-img("/assets/shenron.jpg", fixed);
+  @include background-img("/assets/shenron.jpg", scroll);
   h2 {
-    position: relative;
+    color: $heading-color;
   }
 
-  //stark logo
   h2::after {
     content: "";
     display: inline-block;
-    background-image: url("/assets/stark-logo-transparent.png");
+    background-image: url("/assets/db-7stars.png");
     border-radius: 50%;
-    background-color: $text-color-neutral;
     background-size: cover;
     width: 45px;
     height: 45px;
     margin-left: 1rem;
   }
 
-  p {
-    color: $button-bg-hover;
-    font-family: "Cinzel Decorative", serif;
+  .copyright {
+    font-family: "Bree Serif", serif;
   }
 }
 
@@ -52,11 +45,15 @@ ul[role="list"] {
   li {
     width: 55%;
     text-align: center;
+
+    p {
+      padding-block: 0.4em;
+      padding-inline: 0.8rem;
+      border-radius: 2rem;
+      background-color: $link-bg-color;
+    }
   }
   svg {
     width: var(--svg-width);
-  }
-  p {
-    color: $text-color-neutral;
   }
 }

@@ -4,6 +4,7 @@
   @include flex-center(column);
   position: relative;
   padding-block: 1.5rem;
+  color: $bg-color-inverse;
   background-color: $bg-color;
 
   h2::after {
@@ -28,7 +29,6 @@
   }
 
   .tagcloud {
-    // background-color: black;
     &--item {
       font-size: 0.8rem;
       @include mq(small) {
@@ -42,9 +42,7 @@
       }
       font-family: "Bree Serif", serif;
       font-weight: 700;
-      color: $text-color-accent-hot;
-
-      // background-image: url("/assets/svg-icons/nextjs-fill-svgrepo-com.svg");
+      color: $skills-color;
     }
   }
 }

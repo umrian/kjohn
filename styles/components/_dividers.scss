@@ -5,14 +5,14 @@
   margin-inline: auto;
   margin-block: 2rem;
   height: 0.3rem;
-  background-color: $heading-color;
+  background-color: $section-divider-color;
   border-radius: 1rem;
 }
 
 .project-divider {
   width: 65%;
   height: 0.1rem;
-  background-color: $button-text-hover;
+  background-color: $project-divider-color;
   border-radius: 1rem;
   position: relative;
 }

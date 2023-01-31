@@ -1,13 +1,13 @@
 @use "../scss-utils/variables" as *;
 ::-webkit-scrollbar {
-  width: 0.8rem;
+  width: 1rem;
 }
 ::-webkit-scrollbar-track {
-  background-color: $text-color-neutral;
+  background-color: $scroll-bar-bg-color;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: $bg-color;
+  background-color: $scroll-bar-color;
   border-radius: 6rem;
-  border: 4px solid $text-color-neutral;
+  border: 4px solid $scroll-bar-bg-color;
 }

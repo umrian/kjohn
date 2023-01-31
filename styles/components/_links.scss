@@ -3,9 +3,25 @@
 a {
   @include flex-center(column);
   gap: 2rem;
-  color: $link-text;
+  color: $link-text-color;
   width: 100%;
-  &:hover {
-    color: $link-text-hover;
+  font-family: "Fredoka One", cursive;
+  letter-spacing: 0.09ch;
+
+  &:is(:hover, :focus) {
+    color: $link-text-hover-color;
   }
+
+  &:where(a, input):where(:not(:active)):focus-visible {
+    outline-offset: 8px;
+    outline-color: $link-outline-color;
+    outline-width: 0.2rem;
+    outline-style: double;
+  }
+
+  cursor: pointer;
+  //mobile settings
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 }

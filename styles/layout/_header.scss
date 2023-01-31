@@ -3,7 +3,6 @@
 header {
   height: 100vh;
   height: 100dvh;
-  // @include flex-center(column);
   @include background-img("/assets/kame-house.jpg", scroll);
   position: relative;
 
@@ -14,13 +13,13 @@ header {
       top: 20%;
     }
     right: 0%;
-    transform: translateX(-10%);
+    transform: translateX(-6%);
     max-width: 50rem;
     @include flex(column);
   }
 
   h1 {
-    color: $bg-color;
+    color: $heading-color;
     align-self: flex-start;
     font-size: 3.5rem;
     font-weight: 900;
@@ -28,12 +27,11 @@ header {
     @include mobile-only {
       font-size: 3rem;
     }
-    font-family: "Cinzel Decorative", serif;
   }
 
   span {
-    color: $button-bg-hover;
-    background-color: $bg-color;
+    color: $home-span-color;
+    background-color: $home-span-bg;
     padding: 0.5rem;
     border-radius: 1rem;
     align-self: flex-end;
@@ -42,9 +40,7 @@ header {
       font-size: 1.5rem;
     }
     font-weight: 900;
-    font-family: "Inknut Antiqua", serif;
-  }
-  nav {
-    display: none;
+    font-family: "Fredoka One", cursive;
+    letter-spacing: 0.1ch;
   }
 }

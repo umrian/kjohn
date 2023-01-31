@@ -1,21 +1,52 @@
 @use "./functions.scss" as *;
+@use "./mixins" as *;
 
-//color switch system
+// COLOR SWITCH SYSTEM
+
+//primary switches
 $text-color-accent: var(--clr-accent);
-$text-color-neutral: var(--clr-neutral);
-$bg-color: var(--clr-dark);
+$text-color-accent-hot: var(--clr-accent-hot);
+$bg-color: var(--clr-neutral);
+$bg-color-inverse: var(--clr-dark);
 
-$heading-color: $text-color-accent;
-$paragraph-color: $text-color-neutral;
+@media (prefers-color-scheme: dark) {
+  $bg-color: var(--clr-dark);
+  $bg-color-inverse: var(--clr-neutral);
+}
 
-$button-text: var(--clr-accent);
-$button-bg: var(--clr-accent);
-$button-text-hover: var(--clr-neutral);
-$button-bg-hover: var(--clr-accent-hot);
+//layout switches
+$heading-color: $bg-color;
+$paragraph-color: $bg-color;
 
-$link-text: var(--clr-secondary);
-$link-bg: var(--clr-primary);
-$link-text-hover: var(--clr-tertiary);
+$home-span-color: $text-color-accent-hot;
+$home-span-bg: $bg-color;
+
+$about-section-color: $text-color-accent;
+
+$project-text-color: $bg-color;
+$project-bg-color: $bg-color-inverse;
+
+$skills-color: $text-color-accent-hot;
+
+//button switches
+$button-text-color: $bg-color-inverse;
+$button-bg-color: $bg-color;
+$button-outline-color: $bg-color;
+$button-text-hover-color: $text-color-accent-hot;
+
+//link switches
+$link-text-color: $bg-color-inverse;
+$link-bg-color: $bg-color;
+$link-outline-color: $bg-color;
+$link-text-hover-color: $text-color-accent-hot;
+
+//divider switches
+$section-divider-color: var(--clr-accent);
+$project-divider-color: var(--clr-accent-hot);
+
+//scroll-bar switches
+$scroll-bar-color: $bg-color;
+$scroll-bar-bg-color: $bg-color-inverse;
 
 $img-layer: 10;
 $divider-layer: 9;

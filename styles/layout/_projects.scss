@@ -8,7 +8,9 @@
   padding-top: 3rem;
   padding-bottom: 5rem;
   text-align: center;
-  color: $bg-color;
+  color: $project-text-color;
+  background-color: $project-bg-color;
+
   //for fade-in translatex
   overflow-x: hidden;
 
@@ -22,7 +24,6 @@
     height: 45px;
     margin-left: 1rem;
   }
-  background-color: $text-color-neutral;
   @include mq(medium) {
     @include background-img("/assets/goku-opc.jpg", fixed);
   }
@@ -99,11 +100,13 @@ article:nth-child(3) {
       width: 7rem;
       bottom: -1rem;
       right: -1rem;
+      outline-color: $bg-color-inverse;
     }
     img:nth-child(3) {
       width: 10rem;
       top: -2rem;
       right: 1rem;
+      outline-color: $bg-color-inverse;
     }
   }
 }
