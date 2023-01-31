@@ -65,6 +65,11 @@ select {
   font: inherit;
 }
 
+::selection {
+  background-color: $bg-color;
+  color: $text-color-neutral;
+}
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
@@ -81,10 +86,20 @@ select {
   }
 }
 
-//set global ff
-h1,
-h2,
+h1 {
+  font-family: "Cinzel Decorative";
+}
+h2 {
+  font-family: "Bangers", cursive;
+  letter-spacing: 0.2ch;
+  font-size: 4rem;
+}
 h3 {
-  color: $heading-color;
-  font-family: "Cinzel Decorative", serif;
+  font-family: "Bangers", cursive;
+  font-size: 2rem;
+  letter-spacing: 0.1ch;
+}
+
+p {
+  font-family: "Fredoka One", cursive;
 }
