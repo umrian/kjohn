@@ -1,7 +1,8 @@
 @forward "./base/index";
 @forward "./layout/index";
 @forward "./components/index";
-
+@forward "./scss-utils/variables";
+@use "./scss-utils/variables" as *;
 body {
-  background-color: black;
+  background-color: $bg-color;
 }
