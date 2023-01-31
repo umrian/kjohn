@@ -1,6 +1,7 @@
 import "./styles/main.scss";
 import TagCloud from "TagCloud";
 
+// TAG CLOUD
 const container = ".tagcloud";
 const texts = [
   "React",
@@ -29,7 +30,7 @@ const texts = [
 ];
 const options = {
   radius: 170,
-  maxSpeed: "normal",
+  maxSpeed: "slow",
   initSpeed: "slow",
   direction: 145,
   keep: true,
@@ -49,3 +50,28 @@ if (mqLarge.matches) {
   options.radius = 380;
 }
 TagCloud(container, texts, options);
+
+// INTERACTION OBSERVER
+const observerOptions = {
+  threshold: 1,
+  rootMargin: "0px 0px 100px 0px",
+};
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (!e.isIntersecting) {
+      return;
+    } else {
+      e.target.classList.add("show");
+      observer.unobserve(e.target);
+    }
+  });
+}, observerOptions);
+
+const articles = document.querySelectorAll(".project-details");
+const hiddenElements = Array.from(articles).map((article) =>
+  Array.from(article.children)
+);
+
+hiddenElements.forEach((hiddenElement) =>
+  hiddenElement.forEach((e) => observer.observe(e))
+);
