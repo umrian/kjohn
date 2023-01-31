@@ -25,7 +25,7 @@ const texts = [
   "Redux",
   "GraphQL",
   "Figma",
-  "git",
+  "Git",
   "REST API",
 ];
 const options = {
@@ -54,7 +54,7 @@ TagCloud(container, texts, options);
 // INTERACTION OBSERVER
 const observerOptions = {
   threshold: 1,
-  rootMargin: "0px 0px 100px 0px",
+  rootMargin: "0px 0px -10px 0px",
 };
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((e) => {
