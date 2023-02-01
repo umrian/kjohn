@@ -28,10 +28,6 @@
     @include background-img("/assets/goku-opc.jpg", fixed);
   }
 
-  .section-divider {
-    bottom: 0;
-  }
-
   //INTERACTION OBSERVER
   .project-details > * {
     opacity: 0;

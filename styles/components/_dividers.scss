@@ -1,4 +1,5 @@
 @use "../scss-utils/variables" as *;
+@use "../scss-utils/mixins" as *;
 
 .section-divider {
   width: 65%;
@@ -17,7 +18,7 @@
   position: relative;
 }
 
-.project-divider::after {
+.project-divider::before {
   content: "";
   position: absolute;
   top: -3rem;
@@ -31,18 +32,34 @@
   margin-left: 1rem;
 }
 
-.project-divider:nth-of-type(2n + 1)::after {
+//goku on cloud sticker
+@include mq(medium) {
+  .project-divider:first-of-type:after {
+    content: "";
+    position: absolute;
+    top: -9rem;
+    right: -12rem;
+    display: inline-block;
+    background-image: url("/assets/goku-sticker.png");
+    background-size: cover;
+    width: 180px;
+    height: 250px;
+    margin-left: 1rem;
+  }
+}
+
+.project-divider:nth-of-type(2n + 1)::before {
   top: 0;
   bottom: -3rem;
   left: -4rem;
 }
 
-.project-divider:nth-of-type(2)::after {
+.project-divider:nth-of-type(2)::before {
   background-image: url("/assets/db-3stars.png");
 }
-.project-divider:nth-of-type(3)::after {
+.project-divider:nth-of-type(3)::before {
   background-image: url("/assets/db-4stars.png");
 }
-.project-divider:nth-of-type(4)::after {
+.project-divider:nth-of-type(4)::before {
   background-image: url("/assets/db-5stars.png");
 }
