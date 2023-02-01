@@ -37,7 +37,6 @@
       float: right;
       opacity: 0;
       margin-right: 10rem;
-      width: 140px;
       shape-outside: linear-gradient(
         -135deg,
         rgb(77, 26, 103),
@@ -54,7 +53,6 @@
     @include mq(small) {
       .shape-outside {
         margin-right: 10rem;
-        width: 140px;
       }
     }
     @include mq(medium) {

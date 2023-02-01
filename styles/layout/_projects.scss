@@ -10,6 +10,9 @@
   text-align: center;
   color: $project-text-color;
   background-color: $project-bg-color;
+  @include mq(medium) {
+    @include background-img("/assets/goku-opc.jpg", fixed);
+  }
 
   //for fade-in translatex
   overflow-x: hidden;
@@ -23,9 +26,6 @@
     width: 45px;
     height: 45px;
     margin-left: 1rem;
-  }
-  @include mq(medium) {
-    @include background-img("/assets/goku-opc.jpg", fixed);
   }
 
   //INTERACTION OBSERVER

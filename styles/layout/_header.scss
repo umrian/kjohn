@@ -3,7 +3,11 @@
 header {
   height: 100vh;
   height: 100dvh;
-  @include background-img("/assets/kame-house.jpg", scroll);
+  @include background-img("/assets/kame-house-mobile.jpg", scroll);
+  background-image: -webkit-image-set(
+    url("/assets/kame-house-small.jpg") 1x,
+    url("/assets/kame-house.jpg") 2x
+  );
   position: relative;
 
   hgroup {
