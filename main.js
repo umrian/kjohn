@@ -1,6 +1,9 @@
 import "./styles/main.scss";
 import TagCloud from "TagCloud";
 
+//copyright date
+document.getElementById("date").innerHTML = new Date().getFullYear();
+
 // TAG CLOUD
 const container = ".tagcloud";
 const texts = [
@@ -29,9 +32,9 @@ const texts = [
   "REST API",
 ];
 const options = {
-  radius: 170,
-  maxSpeed: "slow",
-  initSpeed: "slow",
+  radius: 180,
+  maxSpeed: "normal",
+  initSpeed: "normal",
   direction: 145,
   keep: true,
 };
