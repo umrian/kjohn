@@ -4,7 +4,11 @@ footer {
   text-align: center;
   padding: 1rem;
   font-weight: 700;
-  @include background-img("/assets/shenron.jpg", scroll);
+  @include background-img("/assets/shenron-small.jpg", scroll);
+  background-image: -webkit-image-set(
+    url("/assets/shenron-small.jpg") 1x,
+    url("/assets/shenron.jpg") 2x
+  );
   h2 {
     color: $heading-color;
   }

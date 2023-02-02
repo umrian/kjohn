@@ -2,6 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="K John's web developer portfolio with high performance and decent UI design"
+    />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preload" href="/assets/kame-house.jpg" as="image" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,17 +33,17 @@
           src="/assets/kid-goku-transparent.png"
           class="goku"
           alt="goku with dragon ball"
-          fetchpriority="high"
-          decoding="async"
           role="presentation"
+          loading="lazy"
         />
         <hgroup class="about-heading">
           <img
-            src="/assets/kid-goku-transparent.png"
+            src="/assets/kid-goku-shape-outside.png"
             alt="goku with dragon ball"
             class="shape-outside"
             width="140px"
             role="presentation"
+            fetchpriority="low"
             loading="lazy"
           />
           <h2>HI. I'M KJOHN.</h2>
@@ -59,10 +63,15 @@
           <article>
             <div class="img-container">
               <img
-                src="/assets/who-wins.png"
+                src="/assets/who-wins-mobile.png"
+                srcset="
+                  /assets/who-wins-mobile.png 425w,
+                  /assets/who-wins.png        960w
+                "
+                sizes="(max-width: 450px) 425px,
+         960px"
                 alt="who-wins-project-home"
                 role="presentation"
-                loading="lazy"
               />
               <img
                 src="/assets/who-wins-results.png"
@@ -110,10 +119,15 @@
           <article>
             <div class="img-container">
               <img
-                src="/assets/cac-area-graph.png"
+                src="/assets/cac-area-graph-mobile.png"
+                srcset="
+                  /assets/cac-area-graph-mobile.png 425w,
+                  /assets/cac-area-graph.png        960w
+                "
+                sizes="(max-width: 450px) 425px,
+         960px"
                 alt="charts-and-cards"
                 role="presentation"
-                loading="lazy"
               />
               <img
                 src="/assets/cac-line-graph.png"
@@ -167,7 +181,13 @@
           <article>
             <div class="img-container">
               <img
-                src="/assets/mern-social.png"
+                src="/assets/mern-social-mobile.png"
+                srcset="
+                  /assets/mern-social-mobile.png 425w,
+                  /assets/mern-social.png        960w
+                "
+                sizes="(max-width: 450px) 425px,
+         960px"
                 alt="mern-social"
                 role="presentation"
                 loading="lazy"
@@ -206,7 +226,13 @@
           <article>
             <div class="img-container">
               <img
-                src="/assets/react-weather-app.png"
+                src="/assets/react-weather-app-mobile.png"
+                srcset="
+                  /assets/react-weather-app-mobile.png 425w,
+                  /assets/react-weather-app.png        960w
+                "
+                sizes="(max-width: 450px) 425px,
+         960px"
                 alt="react-weather-app"
                 role="presentation"
                 loading="lazy"
@@ -250,7 +276,13 @@
           <article>
             <div class="img-container">
               <img
-                src="/assets/youtube-clone.png"
+                src="/assets/youtube-clone-mobile.png"
+                srcset="
+                  /assets/youtube-clone-mobile.png 425w,
+                  /assets/youtube-clone.png        960w
+                "
+                sizes="(max-width: 450px) 425px,
+         960px"
                 alt="youtube-clone"
                 role="presentation"
                 loading="lazy"
