@@ -8,6 +8,7 @@
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preload" href="/assets/kame-house.jpg" as="image" />
+    <link rel="preload" href="/assets/kid-goku-transparent.png" as="image" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>K JOHN</title>
   </head>
@@ -33,6 +34,8 @@
           src="/assets/kid-goku-transparent.png"
           class="goku"
           alt="goku with dragon ball"
+          fetchpriority="high"
+          decoding="async"
           role="presentation"
         />
         <hgroup class="about-heading">
@@ -73,6 +76,7 @@
          960px"
                 alt="who-wins-project-home"
                 role="presentation"
+                loading="lazy"
               />
               <img
                 src="/assets/who-wins-results.png"
@@ -129,6 +133,7 @@
          960px"
                 alt="charts-and-cards"
                 role="presentation"
+                loading="lazy"
               />
               <img
                 src="/assets/cac-line-graph.png"
