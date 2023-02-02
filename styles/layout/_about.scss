@@ -8,6 +8,10 @@
   @include mq(small) {
     width: 65%;
   }
+  @include mq(medium) {
+    width: 90%;
+  }
+  max-width: 65em;
   @include flex(column);
   gap: 0;
   @include mq(medium) {
@@ -85,12 +89,39 @@
   }
   p {
     padding: 2rem;
+    padding-bottom: 0.5rem;
+
+    line-height: 2;
     @include mobile-only {
       text-align: center;
     }
     @include mq(medium) {
       padding: 4rem;
+      padding-bottom: 1rem;
     }
     flex-basis: 50%;
+    //cta span
+    a {
+      all: unset;
+      cursor: pointer;
+    }
+  }
+
+  .cta {
+    display: block;
+    width: 35%;
+    text-align: center;
+    margin-top: 1rem;
+    padding-block: 0.3rem;
+    padding-inline: 0.8rem;
+    font-size: 1.5rem;
+    @include mq(medium) {
+      font-size: 2rem;
+    }
+    background-color: $bg-color-inverse;
+    &:hover,
+    :focus {
+      color: $text-color-accent-hot;
+    }
   }
 }

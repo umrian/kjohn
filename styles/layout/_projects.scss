@@ -109,6 +109,7 @@ article:nth-child(3) {
 
 .project-details {
   position: relative;
+  flex-basis: 95%;
   @include flex-center(column);
   gap: 1rem;
 }
