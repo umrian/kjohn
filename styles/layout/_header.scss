@@ -3,6 +3,7 @@
 header {
   height: 100vh;
   height: 100dvh;
+  background-color: $bg-color-inverse;
   @include background-img("/assets/kame-house-mobile.jpg", scroll);
   background-image: -webkit-image-set(
     url("/assets/kame-house-small.jpg") 1x,
@@ -46,5 +47,22 @@ header {
     font-weight: 900;
     font-family: "Fredoka One", cursive;
     letter-spacing: 0.1ch;
+  }
+}
+
+.skip-link {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $bg-color;
+  color: $bg-color-inverse;
+  font-family: "Fredoka One", serif;
+  padding: 0.8em;
+  translate: 0 -100%;
+  transition: translate 100ms;
+  &:focus {
+    translate: 0;
   }
 }

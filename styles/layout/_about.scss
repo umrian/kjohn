@@ -104,24 +104,32 @@
     a {
       all: unset;
       cursor: pointer;
+      &:is(:hover, :focus) {
+        color: $link-text-hover-color;
+      }
+      &:is(:focus-visible) {
+        color: $link-text-hover-color;
+        background-color: $bg-color-inverse;
+        .cta {
+          outline-offset: 5px;
+          outline-color: $bg-color-inverse;
+          outline-width: 0.3rem;
+          outline-style: double;
+        }
+      }
     }
-  }
 
-  .cta {
-    display: block;
-    width: 35%;
-    text-align: center;
-    margin-top: 1rem;
-    padding-block: 0.3rem;
-    padding-inline: 0.8rem;
-    font-size: 1.5rem;
-    @include mq(medium) {
-      font-size: 2rem;
-    }
-    background-color: $bg-color-inverse;
-    &:hover,
-    :focus {
-      color: $text-color-accent-hot;
+    .cta {
+      width: 35%;
+      text-align: center;
+      margin-top: 1rem;
+      padding-block: 0.3rem;
+      padding-inline: 0.8rem;
+      font-size: 1.5rem;
+      @include mq(medium) {
+        font-size: 2rem;
+      }
+      background-color: $bg-color-inverse;
     }
   }
 }

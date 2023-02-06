@@ -1,6 +1,12 @@
 @use "../scss-utils/mixins" as *;
 @use "../scss-utils/variables" as *;
 footer {
+  @include flex(column);
+  justify-content: space-between;
+  @include mq(medium) {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
   text-align: center;
   padding: 1rem;
   font-weight: 700;
@@ -25,7 +31,46 @@ footer {
   }
 
   .copyright {
+    justify-self: flex-end;
     font-family: "Bree Serif", serif;
+  }
+  ul[role="list"] {
+    @include flex-center(column, space-around);
+    @include mq(medium) {
+      @include flex-center(row, space-around);
+      gap: 0;
+    }
+    gap: 6rem;
+    width: min(100%, 65em);
+    margin: 0;
+    padding-block: 3rem;
+    li {
+      width: 55%;
+      text-align: center;
+
+      p {
+        padding-block: 0.4em;
+        padding-inline: 0.8rem;
+        border-radius: 2rem;
+        background-color: $link-bg-color;
+      }
+    }
+    svg {
+      width: var(--svg-width);
+    }
+  }
+
+  .scroll-to-top {
+    all: unset;
+    position: fixed;
+    inset: auto 1em 1em auto;
+    color: $bg-color-inverse;
+    background-color: $bg-color;
+    padding-inline: 0.5em;
+    padding-block: 0.1em;
+    border-radius: 0.3em;
+    box-shadow: 0 0 0.2em 0.1em $bg-color-inverse;
+    cursor: pointer;
   }
 }
 
@@ -34,30 +79,4 @@ address {
   @include flex-center(column);
   padding: 1rem;
   height: 80%;
-}
-
-ul[role="list"] {
-  @include flex-center(column, space-around);
-  @include mq(medium) {
-    @include flex-center(row, space-around);
-    gap: 0;
-  }
-  gap: 6rem;
-  width: min(100%, 65em);
-  margin: 0;
-  padding-block: 3rem;
-  li {
-    width: 55%;
-    text-align: center;
-
-    p {
-      padding-block: 0.4em;
-      padding-inline: 0.8rem;
-      border-radius: 2rem;
-      background-color: $link-bg-color;
-    }
-  }
-  svg {
-    width: var(--svg-width);
-  }
 }
