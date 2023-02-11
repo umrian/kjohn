@@ -32,7 +32,7 @@ const texts = [
   "REST API",
 ];
 const options = {
-  radius: 180,
+  radius: 170,
   maxSpeed: "normal",
   initSpeed: "normal",
   direction: 145,
